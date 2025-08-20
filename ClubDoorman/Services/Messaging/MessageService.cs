@@ -241,7 +241,7 @@ public class MessageService : IMessageService
         else
         {
             mediaWarning = Config.IsMediaFilteringDisabledForChat(request.Chat.Id) ? ", стикеры, документы" : ", изображения, стикеры, документы";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning}, просьбы \"писать в ЛС\" и реклама запрещены — при подозрении могут удаляться автоматически! {vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning}, просьбы \"писать в ЛС\" и реклама запрещены — при подозрении могут удаляться автоматически!{vpnAd}";
         }
 
         var captchaWelcomeData = new CaptchaWelcomeNotificationData(
@@ -299,7 +299,7 @@ public class MessageService : IMessageService
         else
         {
             mediaWarning = Config.IsMediaFilteringDisabledForChat(chat.Id) ? ", стикеры, документы" : ", изображения, стикеры, документы";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning}, просьбы \"писать в ЛС\" и реклама запрещены — при подозрении могут удаляться автоматически! {vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning}, просьбы \"писать в ЛС\" и реклама запрещены — при подозрении могут удаляться автоматически!{vpnAd}";
         }
 
         var captchaWelcomeData = new CaptchaWelcomeNotificationData(

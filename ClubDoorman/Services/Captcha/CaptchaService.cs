@@ -117,8 +117,8 @@ public class CaptchaService : ICaptchaService
             fullNameForDisplay = "новый участник чата";
         }
 
-        var welcomeMessage = $"Привет, <a href=\"tg://user?id={request.User.Id}\">{System.Net.WebUtility.HtmlEncode(fullNameForDisplay)}</a>! " +
-                            $"Антиспам: на какой кнопке {Infrastructure.Captcha.CaptchaList[correctAnswer].Description}?";
+        var welcomeMessage = $"Привет, <a href=\"tg://user?id={request.User.Id}\">{System.Net.WebUtility.HtmlEncode(fullNameForDisplay)}</a>\n\n" +
+                            $"Антиспам проверка: на какой кнопке {Infrastructure.Captcha.CaptchaList[correctAnswer].Description}?";
 
         // Добавляем заглушку для рекламы если нужно
         var isNoAdGroup = IsNoAdGroup(request.Chat.Id);
