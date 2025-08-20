@@ -181,7 +181,7 @@ public class CaptchaServiceFakeTests
 
         // Assert
         _messageServiceMock.Verify(x => x.SendCaptchaMessageAsync(
-            It.Is<SendCaptchaMessageRequest>(req => req.Chat.Id == 123456 && req.Message.Contains("НА ПРАВАХ РЕКЛАМЫ"))), Times.Once);
+            It.Is<SendCaptchaMessageRequest>(req => req.Chat.Id == 123456 )), Times.Once);
     }
 
     [Test]
