@@ -229,19 +229,19 @@ public class MessageService : IMessageService
         
         // Заглушка для рекламы (если группа не в исключениях)
         var isNoAdGroup = IsNoAdGroup(request.Chat.Id);
-        var vpnAd = isNoAdGroup ? "" : "\n\n\n📍 <b>Место для рекламы</b> \n <i>...</i>";
+        var vpnAd = isNoAdGroup ? "" : "\n\n<b>НА ПРАВАХ РЕКЛАМЫ</b>\n\n <b><a href=\"https://t.me/phuketkomyuniti\">РУС ЧАТ ПХУКЕТ</b> - Помощь русскоговорящим жителям Пхукета по любым вопросам! 🙏🏼😎👍🏼🫡 Лучшее место взаимопомощи для тех кто переехал или только задумывается над переездом ✈️";
         
         string greetMsg;
         string mediaWarning;
         if (ChatSettingsManager.GetChatType(request.Chat.Id) == "announcement")
         {
             mediaWarning = "";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание:</b> первые три сообщения проходят антиспам-проверку, сообщения со стоп-словами и спамом будут удалены. Не просите писать в ЛС!{vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: сообщения со стоп-словами, просьбы \"писать в ЛС\" и спамом  — при подозрении могут удаляться автоматически!{vpnAd}";
         }
         else
         {
             mediaWarning = Config.IsMediaFilteringDisabledForChat(request.Chat.Id) ? ", стикеры, документы" : ", изображения, стикеры, документы";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> первые три сообщения проходят антиспам-проверку, эмодзи{mediaWarning} и реклама запрещены — они могут удаляться автоматически. Не просите писать в ЛС!{vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning}, просьбы \"писать в ЛС\" и реклама запрещены — при подозрении могут удаляться автоматически! {vpnAd}";
         }
 
         var captchaWelcomeData = new CaptchaWelcomeNotificationData(
@@ -287,19 +287,19 @@ public class MessageService : IMessageService
         
         // Заглушка для рекламы (если группа не в исключениях)
         var isNoAdGroup = IsNoAdGroup(chat.Id);
-        var vpnAd = isNoAdGroup ? "" : "\n\n\n📍 <b>Место для рекламы</b> \n <i>...</i>";
+        var vpnAd = isNoAdGroup ? "" : "\n\n<b>НА ПРАВАХ РЕКЛАМЫ</b>\n\n <b><a href=\"https://t.me/phuketkomyuniti\">РУС ЧАТ ПХУКЕТ</b> - Помощь русскоговорящим жителям Пхукета по любым вопросам! 🙏🏼😎👍🏼🫡 Лучшее место взаимопомощи для тех кто переехал или только задумывается над переездом ✈️";
         
         string greetMsg;
         string mediaWarning;
         if (ChatSettingsManager.GetChatType(chat.Id) == "announcement")
         {
             mediaWarning = "";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание:</b> первые три сообщения проходят антиспам-проверку, сообщения со стоп-словами и спамом будут удалены.\n\n⚠️ <b>Важно:</b> банальные приветствия без цели удаляются автоматически. Пишите конкретные вопросы!\n\nНе просите писать в ЛС!{vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: сообщения со стоп-словами, просьбы \"писать в ЛС\" и спамом  — при подозрении могут удаляться автоматически!{vpnAd}";
         }
         else
         {
             mediaWarning = Config.IsMediaFilteringDisabledForChat(chat.Id) ? ", стикеры, документы" : ", изображения, стикеры, документы";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> первые три сообщения проходят антиспам-проверку, эмодзи{mediaWarning} и реклама запрещены — они могут удаляться автоматически.\n\n⚠️ <b>Важно:</b> банальные приветствия без цели удаляются автоматически. Пишите конкретные вопросы!\n\nНе просите писать в ЛС!{vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning}, просьбы \"писать в ЛС\" и реклама запрещены — при подозрении могут удаляться автоматически! {vpnAd}";
         }
 
         var captchaWelcomeData = new CaptchaWelcomeNotificationData(

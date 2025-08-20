@@ -122,7 +122,7 @@ public class CaptchaService : ICaptchaService
 
         // Добавляем заглушку для рекламы если нужно
         var isNoAdGroup = IsNoAdGroup(request.Chat.Id);
-        var vpnAdHtml = isNoAdGroup ? "" : "\n\n 📍 Место для рекламы\n<i>...</i>";
+        var vpnAdHtml = isNoAdGroup ? "" : "\n\n<b>НА ПРАВАХ РЕКЛАМЫ</b>\n\n <b><a href=\"https://t.me/phuketkomyuniti\">РУС ЧАТ ПХУКЕТ</b> - Помощь русскоговорящим жителям Пхукета по любым вопросам! 🙏🏼😎👍🏼🫡 Лучшее место взаимопомощи для тех кто переехал или только задумывается над переездом ✈️";
         welcomeMessage += vpnAdHtml;
 
         Message captchaMessage;
