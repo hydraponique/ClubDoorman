@@ -229,7 +229,7 @@ public class MessageService : IMessageService
         
         // Заглушка для рекламы (если группа не в исключениях)
         var isNoAdGroup = IsNoAdGroup(request.Chat.Id);
-        var vpnAd = isNoAdGroup ? "" : "\n\n<b>НА ПРАВАХ РЕКЛАМЫ</b>\n\n<b><a href=\"https://t.me/phuketkomyuniti\">РУС ЧАТ ПХУКЕТ</a></b> - Помощь русскоговорящим жителям Пхукета по любым вопросам! 🙏🏼😎👍🏼🫡 Лучшее место взаимопомощи для тех кто переехал или только задумывается над переездом ✈️";
+        var vpnAd = isNoAdGroup ? "" : "\n\n💵 ОБМЕН ВАЛЮТ: <b><a href=\"https://t.me/bereza_exchange\">@bereza_exchange</a></b>";
         
         string greetMsg;
         string mediaWarning;
@@ -287,7 +287,7 @@ public class MessageService : IMessageService
         
         // Заглушка для рекламы (если группа не в исключениях)
         var isNoAdGroup = IsNoAdGroup(chat.Id);
-        var vpnAd = isNoAdGroup ? "" : "\n\n<b>НА ПРАВАХ РЕКЛАМЫ</b>\n\n<b><a href=\"https://t.me/phuketkomyuniti\">РУС ЧАТ ПХУКЕТ</a></b> - Помощь русскоговорящим жителям Пхукета по любым вопросам! 🙏🏼😎👍🏼🫡 Лучшее место взаимопомощи для тех кто переехал или только задумывается над переездом ✈️";
+        var vpnAd = isNoAdGroup ? "" : "\n\n💵 ОБМЕН ВАЛЮТ: <b><a href=\"https://t.me/bereza_exchange\">@bereza_exchange</a></b>";
         
         string greetMsg;
         string mediaWarning;
