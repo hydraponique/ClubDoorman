@@ -56,9 +56,20 @@ internal sealed class UserManager : IUserManager
                         _banlist.TryRemove(key, out _);
                     
                     // Заполняем его новыми значениями: 1 = banned
+					// 5228763720 - @JohnPhuket (Евгений Пхукет)
+					// 554933235 - @cocorental (Анастасия Аренда авто и байков Пхукет)
                     foreach (var id in banlist)
-                        _banlist.TryAdd(id, 1);
-                    
+					{
+                        if (id == 5228763720 || id == 554933235)
+						{
+							_banlist.TryAdd(id, 0);
+						}
+						else
+						{
+							_banlist.TryAdd(id, 1);
+						}
+                    }
+					
                     _logger.LogInformation("Обновлен банлист из lols.bot: было {OldCount}, стало {NewCount} записей", oldCount, _banlist.Count);
                 }
                 else

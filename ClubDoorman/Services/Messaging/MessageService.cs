@@ -229,19 +229,19 @@ public class MessageService : IMessageService
         
         // Заглушка для рекламы (если группа не в исключениях)
         var isNoAdGroup = IsNoAdGroup(request.Chat.Id);
-        var vpnAd = isNoAdGroup ? "" : "\n\n💵 ОБМЕН ВАЛЮТ: <b><a href=\"https://t.me/bereza_exchange\">@bereza_exchange</a></b>";
+        var vpnAd = isNoAdGroup ? "" : "\n<b><a href=\"https://t.me/bereza_exchange\">💵 Bereza Exchange</a></b> - проверенный сервис обмена валют в Таиланде. Обмен рублей и криптовалюты на тайские баты. Надежно и безопасно.";
         
         string greetMsg;
         string mediaWarning;
         if (ChatSettingsManager.GetChatType(request.Chat.Id) == "announcement")
         {
             mediaWarning = "";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: сообщения со стоп-словами, просьбы \"писать в ЛС\" и спамом  — при подозрении могут удаляться автоматически!{vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку — при подозрении могут удаляться автоматически!{vpnAd}";
         }
         else
         {
             mediaWarning = Config.IsMediaFilteringDisabledForChat(request.Chat.Id) ? ", стикеры, документы" : ", изображения, стикеры, документы";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning}, просьбы \"писать в ЛС\" и реклама запрещены — при подозрении могут удаляться автоматически!{vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning} и реклама запрещены — при подозрении могут удаляться автоматически!{vpnAd}";
         }
 
         var captchaWelcomeData = new CaptchaWelcomeNotificationData(
@@ -287,19 +287,19 @@ public class MessageService : IMessageService
         
         // Заглушка для рекламы (если группа не в исключениях)
         var isNoAdGroup = IsNoAdGroup(chat.Id);
-        var vpnAd = isNoAdGroup ? "" : "\n\n💵 ОБМЕН ВАЛЮТ: <b><a href=\"https://t.me/bereza_exchange\">@bereza_exchange</a></b>";
+        var vpnAd = isNoAdGroup ? "" : "\n<b><a href=\"https://t.me/bereza_exchange\">💵 Bereza Exchange</a></b> - проверенный сервис обмена валют в Таиланде. Обмен рублей и криптовалюты на тайские баты. Надежно и безопасно.";
         
         string greetMsg;
         string mediaWarning;
         if (ChatSettingsManager.GetChatType(chat.Id) == "announcement")
         {
             mediaWarning = "";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: сообщения со стоп-словами, просьбы \"писать в ЛС\" и спамом  — при подозрении могут удаляться автоматически!{vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку - при подозрении могут удаляться автоматически!{vpnAd}";
         }
         else
         {
             mediaWarning = Config.IsMediaFilteringDisabledForChat(chat.Id) ? ", стикеры, документы" : ", изображения, стикеры, документы";
-            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning}, просьбы \"писать в ЛС\" и реклама запрещены — при подозрении могут удаляться автоматически!{vpnAd}";
+            greetMsg = $"👋 {mention}\n\n<b>Внимание!</b> Первые несколько сообщений проходят дополнительную антиспам-проверку: множественные эмодзи{mediaWarning} и реклама запрещены — при подозрении могут удаляться автоматически!{vpnAd}";
         }
 
         var captchaWelcomeData = new CaptchaWelcomeNotificationData(

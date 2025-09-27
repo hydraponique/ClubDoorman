@@ -122,7 +122,7 @@ public class CaptchaService : ICaptchaService
 
         // Добавляем заглушку для рекламы если нужно
         var isNoAdGroup = IsNoAdGroup(request.Chat.Id);
-        var vpnAdHtml = isNoAdGroup ? "" : "\n\n💵 ОБМЕН ВАЛЮТ: <b><a href=\"https://t.me/bereza_exchange\">@bereza_exchange</a></b>";
+        var vpnAdHtml = isNoAdGroup ? "" : "\n<b><a href=\"https://t.me/bereza_exchange\">💵 Bereza Exchange</a></b> - проверенный сервис обмена валют в Таиланде. Обмен рублей и криптовалюты на тайские баты. Надежно и безопасно.";
         //welcomeMessage += vpnAdHtml;
 
         Message captchaMessage;

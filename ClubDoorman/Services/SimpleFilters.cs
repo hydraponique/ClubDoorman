@@ -97,7 +97,7 @@ public static class SimpleFilters
     {
         if (message == null) throw new ArgumentNullException(nameof(message));
         
-        var normalizedMessage = message.Trim().ToLowerInvariant();
+        /* var normalizedMessage = message.Trim().ToLowerInvariant();
         
         // Убираем знаки препинания и лишние пробелы
         var cleanMessage = Regex.Replace(normalizedMessage, @"[^\w\s]", "").Trim();
@@ -198,7 +198,7 @@ public static class SimpleFilters
             if (hasGreeting && hasEmoji)
                 return true;
         }
-        
+        */
         return false;
     }
 }
