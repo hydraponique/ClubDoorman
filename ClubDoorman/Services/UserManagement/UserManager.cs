@@ -58,9 +58,10 @@ internal sealed class UserManager : IUserManager
                     // Заполняем его новыми значениями: 1 = banned
 					// 5228763720 - @JohnPhuket (Евгений Пхукет)
 					// 554933235 - @cocorental (Анастасия Аренда авто и байков Пхукет)
+                   // 6688417194 - @ageres_thd (Sergey Bestie_rent)
                     foreach (var id in banlist)
 					{
-                        if (id == 5228763720 || id == 554933235)
+                        if (id == 5228763720 || id == 554933235 || id == 6688417194)
 						{
 							_banlist.TryAdd(id, 0);
 						}
